@@ -12,6 +12,7 @@ today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
 birthday = os.getenv('BIRTHDAY')
+pursue = os.getenv('PURSUE')
 
 app_id = os.getenv('APP_ID')
 app_secret = os.getenv('APP_SECRET')
@@ -138,6 +139,10 @@ data = {
     "color": get_random_color()
   },
   "love_days": {
+    "value": get_memorial_days_count(),
+    "color": get_random_color()
+  },
+  "pursue_days": {
     "value": get_memorial_days_count(),
     "color": get_random_color()
   },
