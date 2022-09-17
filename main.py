@@ -61,7 +61,7 @@ def get_memorial_days_count():
 
 #追求时间
 def get_pursueday_left():
-  if birthday is None:
+  if pursueday is None:
     print('没有设置 PURSE')
     return 0
   next = datetime.strptime(str(today.year) + "-" + pursueday, "%Y-%m-%d")
