@@ -59,12 +59,12 @@ def get_memorial_days_count():
   return delta.days
 
 #追求的天数
-def get_memorial1_days_count():
+def get_memoriale_days_count():
   if pursue is None:
     print('没有设置 PURSUE')
     return 0
-  delta = today - datetime.strptime(pursue, "%Y-%m-%d")
-  return delta.days
+  deltae = today - datetime.strptime(pursue, "%Y-%m-%d")
+  return deltae.days
 
 
 # 生日倒计时
@@ -152,7 +152,7 @@ data = {
     "color": get_random_color()
   },
   "pursue_days": {
-    "value": get_memorial1_days_count(),
+    "value": get_memoriale_days_count(),
     "color": get_random_color()
   },
   "birthday_left": {
