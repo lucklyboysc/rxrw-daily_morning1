@@ -62,12 +62,10 @@ def get_memorial_days_count():
 #追求时间
 def get_pursue_left():
   if pursue is None:
-    print('没有设置 PURSE')
+    print('没有设置 PURSUE')
     return 0
-  next = datetime.strptime(str(today.year) + "-" + pursue, "%Y-%m-%d")
-  if next < nowtime:
-    next = next.replace(year=next.year + 1)
-  return (next - today).days
+  delta = today - datetime.strptime(pursue, "%Y-%m-%d")
+  return delta.days
 
 
 # 生日倒计时
