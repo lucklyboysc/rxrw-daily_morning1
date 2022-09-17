@@ -166,6 +166,10 @@ data = {
     "value": get_words(),
     "color": get_random_color()
   },
+   "text": {
+    "value": get_text(),
+    "color": get_random_color()
+  },
 }
 
 if __name__ == '__main__':
