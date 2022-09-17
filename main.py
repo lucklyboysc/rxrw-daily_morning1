@@ -60,11 +60,11 @@ def get_memorial_days_count():
 
 
 #追求时间
-def get_pursueday_left():
-  if pursueday is None:
+def get_pursue_left():
+  if pursue is None:
     print('没有设置 PURSE')
     return 0
-  next = datetime.strptime(str(today.year) + "-" + pursueday, "%Y-%m-%d")
+  next = datetime.strptime(str(today.year) + "-" + pursue, "%Y-%m-%d")
   if next < nowtime:
     next = next.replace(year=next.year + 1)
   return (next - today).days
@@ -154,8 +154,8 @@ data = {
     "value": get_memorial_days_count(),
     "color": get_random_color()
   },
-  "get_pursueday_left": {
-    "value": get_pursueday_left(),
+  "get_pursue_left": {
+    "value": get_pursue_left(),
     "color": get_random_color()
   },
   "birthday_left": {
